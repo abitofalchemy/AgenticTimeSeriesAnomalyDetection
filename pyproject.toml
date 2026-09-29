@@ -1,0 +1,30 @@
+[project]
+name = "groqclfr"
+version = "0.1.0"
+description = "COVID-19 time-series anomaly detection with a GroqCloud AI agent and Streamlit dashboard"
+readme = "README.md"
+authors = [
+    { name = "abitofalchemy", email = "salvador.aguinaga@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "altair>=5",
+    "groq",
+    "numpy",
+    "pandas",
+    "python-dotenv",
+    "requests",
+    "streamlit",
+    "tabulate",
+]
+
+[project.scripts]
+groqclfr = "groqclfr:main"
+groqclfr-dashboard = "groqclfr.cli:dashboard"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
