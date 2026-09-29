@@ -1,6 +1,6 @@
 # COVID-19 Anomaly Detection with an AI Agent
 
-This work is a replication of https://github.com/rautmadhura4/anomaly_detection_agent/tree/main. The original work was presented by Madhura Raut (https://towardsdatascience.com/building-an-ai-agent-to-detect-and-handle-anomalies-in-time-series-data/)
+This work is a replication of https://github.com/rautmadhura4/anomaly_detection_agent/tree/main. The original work was presented by Madhura Raut (https://towardsdatascience.com/building-an-ai-agent-to-detect-and-handle-anomalies-in-time-series-data/). This work is co-authored with Claude. 
 
 
 End-to-end agentic anomaly detection and handling on COVID-19 time-series data:
