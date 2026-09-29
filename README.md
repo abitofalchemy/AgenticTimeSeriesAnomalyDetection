@@ -58,3 +58,18 @@ tests/          unit tests with a fake Groq client
 ```
 
 All thresholds live in `config.py`.
+
+# Appendix
+
+Notes:  The dependencies now live in pyproject.toml, and uv.lock pins the exact versions. The current requirements.txt is also out of date: it lists phidata, which we dropped, and is missing pandas, numpy and requests. Anyone who installed from it would get a setup that doesn't work.
+
+Anyone using pip without uv can still install from the project itself with pip install ..
+
+The only reason to keep a requirements.txt is a tool that specifically asks for one, such as some deployment platforms. If that comes up, you can generate one from the lockfile so it stays in sync:
+
+`uv export --format requirements-txt --no-hashes > requirements.txt`
+
+So you can delete it with the rest of the obsolete files:
+
+`rm requirements.txt src/groqclfr/{anom_detection,severity_classification,create_agent_groq_cloud,prompt_ai_agent,decision_ai,data_ingestion}.py`
+
